@@ -5,12 +5,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class TransactionService {
 
-    public void putMoney(int toAccount, int amount){
+    public void putMoney(int toAccountID, int amount){
     }
 
-    public void withdrawMoney(int fromAccount, int amount){
+    public void withdrawMoney(int fromAccountID, int amount){
     }
 
-    public void transferMoney(int fromAccount, int amount, int toAccount){
+    public void transferMoney(int fromAccountID, int amount, int toAccountID){
     }
 }
