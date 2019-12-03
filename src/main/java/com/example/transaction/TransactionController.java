@@ -14,17 +14,17 @@ public class TransactionController {
     }
 
     @PutMapping("/put")
-    public void putMoney(@RequestParam int toAccount, int amount) {
-        transactionService.putMoney(toAccount, amount);
+    public void putMoney(@RequestParam int toAccountID, int amount) {
+        transactionService.putMoney(toAccountID, amount);
     }
 
     @PutMapping("/withdraw")
-    public void withdrawMoney(@RequestParam int fromAccount, int amount) {
-        transactionService.withdrawMoney(fromAccount, amount);
+    public void withdrawMoney(@RequestParam int fromAccountID, int amount) {
+        transactionService.withdrawMoney(fromAccountID, amount);
     }
 
     @PutMapping("/transfer")
-    public void transferMoney(@RequestParam int fromAccount, int amount, int toAccount) {
-        transactionService.transferMoney(fromAccount, amount, toAccount);
+    public void transferMoney(@RequestParam int fromAccountID, int amount, int toAccountID) {
+        transactionService.transferMoney(fromAccountID, amount, toAccountID);
     }
 }
