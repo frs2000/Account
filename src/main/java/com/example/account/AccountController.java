@@ -1,20 +1,22 @@
 package com.example.account;
 
+import com.example.transaction.Transaction;
+import com.example.transaction.TransactionDTO;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(path="/account")
+@RequestMapping("/account")
 public class AccountController {
 
-    @PutMapping(path="/put")
-    public void putMoney (@RequestParam int accountID, int amount) {
+    @PutMapping("/put")
+    public void putMoney (@RequestBody TransactionDTO transactionDTO) {
     }
 
-    @PutMapping(path="/withdraw")
-    public void withdrawMoney(@RequestParam int accountID, int amount) {
+    @PutMapping("/withdraw")
+    public void withdrawMoney(@RequestBody TransactionDTO transactionDTO) {
     }
 
-    @PutMapping(path="/withdraw")
-    public void transferMoney(@RequestParam int accountID, int amount, int recipientID) {
+    @PutMapping("/transfer")
+    public void transferMoney(@RequestBody Transaction transaction) {
     }
 }
