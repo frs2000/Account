@@ -1,22 +1,26 @@
 package com.example.account;
 
-import com.example.transaction.Transaction;
-import com.example.transaction.TransactionDTO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/account")
 public class AccountController {
+    private AccountService accountService;
 
-    @PutMapping("/put")
-    public void putMoney (@RequestBody TransactionDTO transactionDTO) {
+    @Autowired
+    public AccountController(AccountService accountService) {
+        this.accountService = accountService;
     }
 
-    @PutMapping("/withdraw")
-    public void withdrawMoney(@RequestBody TransactionDTO transactionDTO) {
+    @PostMapping("/create")
+    public int create(@RequestBody Account account) {
+        return accountService.create(account);
     }
 
-    @PutMapping("/transfer")
-    public void transferMoney(@RequestBody Transaction transaction) {
+
+    @GetMapping("/getBalanceByID")
+    public int getBalanceByID(@RequestParam int id) {
+        return accountService.getBalanceByID(id);
     }
 }
