@@ -10,5 +10,5 @@ public class Account {
     private int id;
     private String name;
     private String surname;
-    private int account;
+    private int balance;
 }
