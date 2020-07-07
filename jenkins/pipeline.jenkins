@@ -12,7 +12,9 @@ pipeline {
     }
     stages {
         stage("Test") {
-            echo 'Pipeline'
+            steps{
+                echo 'Pipeline'
+            }
         }
     }
 }
