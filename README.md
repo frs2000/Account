@@ -8,3 +8,8 @@ http://localhost:8080/swagger-ui.html
 
 Jenkins
 https://www.jenkins.io/doc/book/pipeline/
+
+tests
+console command for Maven -> mvn test
+for gradle -> gradle test
+https://www.codeflow.site/ru/article/maven__how-to-run-unit-test-with-maven
