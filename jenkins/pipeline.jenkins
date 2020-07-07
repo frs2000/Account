@@ -12,6 +12,7 @@ pipeline {
     }
     stages {
         stage("Test") {
+            echo 'Pipeline'
         }
     }
 }
