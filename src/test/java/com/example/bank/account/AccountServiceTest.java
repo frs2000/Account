@@ -6,6 +6,6 @@ public class AccountServiceTest extends TestCase {
 
     public void testGetBalanceByID() {
         AccountService accountService = new AccountService();
-        assertEquals(2, accountService.getBalanceByID(1));
+        assertEquals(1, accountService.getBalanceByID(1));
     }
 }
