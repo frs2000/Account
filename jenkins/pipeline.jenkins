@@ -11,9 +11,19 @@ pipeline {
         timestamps()
     }
     stages {
-        stage("Test") {
+        stage('Build') {
+            steps {
+                sh 'make'
+                archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
+            }
+        }
+        stage('Test') {
             steps{
-                echo 'Pipeline'
+                echo 'Tests'
+            }
+            steps {
+                sh 'make check || true'
+                junit '**/target/*.xml'
             }
         }
     }
